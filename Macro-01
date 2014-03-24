@@ -1,0 +1,28 @@
+/script p=GetClientPlayer()
+t = GetTargetHandle(p.GetTarget())
+HP=p.nCurrentLife*100/p.nMaxLife
+MP=p.nCurrentMana*100/p.nMaxMana
+KC=GetCharacterDistance(p.dwID,t.dwID)/64
+KV=p.nAccumulateValue
+function CDs(skillId)
+bOnCD,currentCDTime,totalCDTime = p.GetSkillCDProgress(skillId,p.GetSkillLevel(skillId))
+return currentCDTime/16 == 0
+end
+function Use(id)
+OnAddOnUseSkill(id,p.GetSkillLevel(id))
+end
+function CBuff(target,id)
+for z,x in pairs(target.GetBuffList()) do
+if x.dwID==id then return true end
+end return false end
+function CheckOT(p)
+return p.GetOTActionState()==0
+end
+if KV==0 then Use(573) Use(537) end
+if CDs(561) then Use(561) end
+if CDs(564) then Use(564) end
+if not CBuff(p,538) then Use(568) end
+if not CBuff(p,1987) then Use(548) end
+if CDs(2716) then Use(2716) end
+if KC<10 and not CBuff(p,693) then Use(559) end
+if CheckOT(p) then Use(2707) end
