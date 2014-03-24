@@ -1,3 +1,8 @@
+==============================================================================
+Copy and paste trực tiếp vào QLCL
+- DPS lúc đầu cao hơn, thích hợp đánh boss ngắn, di chuyển nhiều
+==============================================================================
+
 /script p=GetClientPlayer()
 t = GetTargetHandle(p.GetTarget())
 HP=p.nCurrentLife*100/p.nMaxLife
@@ -27,7 +32,3 @@ if CDs(2716) then Use(2716) end
 if KC<10 and not CBuff(p,693) then Use(559) end
 if CheckOT(p) then Use(2707) end
 
-==============================================================================
-Copy and paste trực tiếp vào QLCL
-- DPS lúc đầu cao hơn, thích hợp đánh boss ngắn, di chuyển nhiều
-==============================================================================
