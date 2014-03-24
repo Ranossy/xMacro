@@ -1,0 +1,16 @@
+==============================================================================
+Copy and paste trực tiếp vào QLCL
+- DPS càng về sau càng mạnh, dùng với addon xMacro
+- Thích hợp với BOSS ít di chuyển
+==============================================================================
+
+/skill [qidian<4]Mãn Đường Thế
+/skill [nobuff:Kiếm Vũ]Danh Động Tứ Phương
+/skill Long Trì Nhạc
+/skill [nobuff:Kiếm Thần Vô Ngã,distance<10]Kiếm Thần Vô Ngã
+/skill [distance<8]Kiếm Ảnh Lưu Ngấn
+/skill [mbuff:Cấp Khúc>0]Phồn Âm Cấp Tiết
+/skill [mbuff:Cấp Khúc>1,bufftime:Kiếm Thần Vô Ngã>16]Kiếm Khí Trường Giang
+/skill [mbuff:Cấp Khúc>3]Kiếm Phá Hư Không
+/config channel-on
+/skill Đại Huyền Cấp Khúc
